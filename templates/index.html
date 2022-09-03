@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %} Login {% endblock %}
+
+
+{% block contenido %}
+
+<div class="container mt-5">
+    <h1>Ninjas </h1>
+    <form action="/process" method="post">
+        <label for="name">
+            Name:
+        </label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="name">
+            Dojo Location:
+        </label>
+        <input type="text" name="location" id="local">
+        <br>
+        <label for="name">
+            Favorite languages:
+        </label>
+        <input type="text" name="languages" id="languages">
+        <br>
+        <label for="name">
+            comments:
+        </label>
+        <input type="text" name="comments" id="comments">
+        <button class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+
+
+
+{% endblock %}

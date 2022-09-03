@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %} Login {% endblock %}
+
+{% block contenido %}
+
+<div class="container mt-5"></div>
+
+    <h1>Results</h1>
+    <p>Name: {{session['ninja']['name']}}</p>
+    <p>Dojo Location: {{session['ninja']['location']}}</p>
+    <p>Favorite languages: {{session['ninja']['languages']}}</p>
+    <p>comments: {{session['ninja']['comments']}}</p>
+
+</div>
+
+{% endblock %}
