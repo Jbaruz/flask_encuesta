@@ -1,36 +1,63 @@
 {% extends "base.html" %}
-{% block titulo %} Login {% endblock %}
+{% block titulo %} Encuesta  {% endblock %}
 
 
 {% block contenido %}
 
-<div class="container mt-5">
-    <h1>Ninjas </h1>
-    <form action="/process" method="post">
-        <label for="name">
-            Name:
-        </label>
-        <input type="text" name="name" id="name">
-        <br>
-        <label for="name">
-            Dojo Location:
-        </label>
-        <input type="text" name="location" id="local">
-        <br>
-        <label for="name">
-            Favorite languages:
-        </label>
-        <input type="text" name="languages" id="languages">
-        <br>
-        <label for="name">
-            comments:
-        </label>
-        <input type="text" name="comments" id="comments">
-        <button class="btn btn-primary">Submit</button>
-
-    </form>
+<div class="d-flex justify-content-center">
+    <div class="card text-bg-dark mb-3" style="max-width: 34rem;">
+        <div class="container mt-2">
+            <h2 class="text-center text-warning">Escuesta Dojo</h2 >
+            <form class="row g-3" role="form" action="/process" method="post">
+                <div class="row mb-3">
+                    <label for="name">
+                        Name:
+                    </label>
+                    <input type="name" class = "form-control" name="name" id="name">
+                </div>
+        
+                <div class="row mb-3">
+                    <label for="name">
+                        Dojo Location:
+                    </label>
+                    <select class="form-control" name="location" id="local">
+                        <option>Chicago</option>
+                        <option>Chile</option>
+                        <option>Seattle</option>
+                        <option>Toronto</option>
+                        <option>Juanjui</option>
+                    </select>
+                </div>
+        
+                <div class="row mb-3">
+                    <label for="name">
+                        Favorite languages:
+                    </label>
+                    <select class="form-control" name="languages" id="languages">
+                        <option>Python</option>
+                        <option>C**</option>
+                        <option>Java</option>
+                        <option>TypeScript</option>
+                        <option>Ruby</option>
+                        <option>Go</option>
+                        <option>HTML</option>
+                        <option>MySQL</option>
+                        <option>CSS</option>
+                    </select>
+                </div>
+                
+                <br>
+                <div class="row mb-3">
+                    <label for="name">
+                        comments:
+                    </label>
+                    <textarea class = "form-control" rows = "3" name="comments" id="comments"></textarea>
+                    <button class="btn btn-primary btn-sm">Submit</button>
+                </div>
+        
+            </form>
+        </div>
+    </div>
 </div>
-
-
 
 {% endblock %}
